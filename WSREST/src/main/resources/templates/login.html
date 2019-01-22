@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf Привет Мир Пример</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/mystyles.css}" href="../../css/mystyles.css" />
+</head>
+<body>
+
+<!-- vladmaxi top bar -->
+<div class="vladmaxi-top">
+    <a href="https://vk.com/morecore1337" target="_blank">Ramaev A.D.</a>
+    <span class="right">
+            <a href="https://github.com/onekzy">
+                <strong>GitHub</strong>
+            </a>
+        </span>
+    <div class="clr"></div>
+</div>
+<!--/ vladmaxi top bar -->
+
+<form th:action="@{/login}" method="post" class="login">
+    <p>
+        <label for="login">Логин:</label>
+        <input type="text" name="username" id="login" style="color: #777;" value="name@example.com"
+               onfocus="if (this.value == 'name@example.com') {this.value = ''; this.style.color = '#000';}"
+               onblur="if (this.value == '') {this.value = 'name@example.com'; this.style.color = '#777';}">
+    </p>
+
+    <p>
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" id="password" style="color: #777;" value="4815162342"
+               onfocus="if (this.value == '4815162342') {this.value = ''; this.style.color = '#000';}"
+               onblur="if (this.value == '') {this.value = '4815162342'; this.style.color = '#777';}">
+    </p>
+
+    <p class="login-submit">
+        <button type="submit" class="login-button">Войти</button>
+    </p>
+
+
+    <ul id="menu">
+        <li class="forgot-password"><a href="index.html">Забыл пароль?</a></li>
+        <li class="registration"><a href="/registration">Регистрация</a></li>
+    </ul>
+
+</form>
+
+
+
+
+</body>
+</html>
